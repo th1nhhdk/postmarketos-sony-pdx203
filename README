@@ -1,0 +1,12 @@
+--- install
+
+mv -v ./*-sony-pdx203 ~/.local/var/pmbootstrap/cache_git/pmaports/device/testing/
+
+# choose sony-pdx203
+pmbootstrap init
+
+pmbootstrap install --sdcard=<path>
+
+# adb reboot bootloader
+fastboot flash dtbo ./emptystuff.img
+pmbootstrap flasher flash-kernel
