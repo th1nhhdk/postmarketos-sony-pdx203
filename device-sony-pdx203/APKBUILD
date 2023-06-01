@@ -1,0 +1,28 @@
+# Reference: <https://postmarketos.org/devicepkg>
+pkgname=device-sony-pdx203
+pkgdesc="Sony Xperia 1 II"
+pkgver=0.1
+pkgrel=0
+url="https://postmarketos.org"
+license="MIT"
+arch="aarch64"
+options="!check !archcheck"
+depends="
+	linux-postmarketos-qcom-sm8250
+	mkbootimg
+	postmarketos-base
+"
+makedepends="devicepkg-dev"
+source="deviceinfo"
+
+build() {
+	devicepkg_build $startdir $pkgname
+}
+
+package() {
+	devicepkg_package $startdir $pkgname
+}
+
+sha512sums="
+57768d80201ec9dcfaf10620b6555c0c89fe0e264886098cdfd9d60760d828b769cd91826e0453cd380edf744c3e365314fe55aac1fd068e626b4f2bbbca298c  deviceinfo
+"
