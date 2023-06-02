@@ -1,9 +1,9 @@
 --- install
 
 mv -v ./*-sony-pdx203 ~/.local/var/pmbootstrap/cache_git/pmaports/device/testing/
+pmbootstrap build --force device-sony-pdx203
 
-# choose sony-pdx203
-pmbootstrap init
+# pmbootstrap init here
 
 pmbootstrap install --sdcard=<path>
 
