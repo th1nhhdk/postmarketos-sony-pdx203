@@ -1,7 +1,9 @@
 ## status
 boots, without working screen
 
-also for some reason pmOS cannot find my root partition
+also for some reason pmOS cannot find my root or boot partition
+
+(output from `wait_root_partition`)
 ```
 Could not find the rootfs.
 Maybe you need to insert the sdcard, if your device has
